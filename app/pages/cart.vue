@@ -6,13 +6,20 @@ const checkout = () => {
   clear();
   done.value = true;
 };
+
+useSeoMeta({
+  title: "Your cart | Jewellery Shop",
+  description: "Review the items in your cart.",
+});
 </script>
 
 <template>
   <main class="mx-auto max-w-2xl p-6">
     <h1 class="mb-6 text-3xl font-bold">Your cart</h1>
 
-    <p v-if="done" class="rounded border p-4">Thank you! This is a demo checkout, no payment was made.</p>
+    <p v-if="done" class="rounded border p-4">
+      Thank you! This is a demo checkout, no payment was made.
+    </p>
 
     <p v-else-if="!items.length">Your cart is empty.</p>
 
